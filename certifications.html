@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Venkatadri Portfolio</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+                <span>Certifications</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="index.html">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="about.html">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="skills.html">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="projects.html">Projects</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="certifications.html">Certifications</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="contact.html">Contact</a></div>
+        </div>
+        <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+    </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="skills.html">Skills</a>
+                <a href="projects.html">Projects</a>
+                <a href="certifications.html">Certifications</a>
+                <a href="contact.html">Contact</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+    <section class="certifications-container">
+        <div class="carousel-container" data-aos="fade-up" data-aos-duration="1500">
+            <button class="nav-button prev" onclick="prevCert()">&#10094;</button>
+            <div class="cert-card" id="cert-card">
+                <img src="img/python.png" id="cert-img" alt="Certification">
+                <h3 id="cert-title">Python Programming</h3>
+                <p id="cert-issuer">Issued by CodeTantra</p>
+            </div>
+            <button class="nav-button next" onclick="nextCert()">&#10095;</button>
+        </div>
+    </section>
+    <script>
+        const certificates = [
+            { img: "img/python.png", title: "Python Programming", issuer: "Issued by CodeTantra" },
+            { img: "img/SQL.png", title: "SQL(Intermediate)", issuer: "Issued by HackerRank" },
+            { img: "img/Full_Stack.png", title: "Full-Stack & Web Development", issuer: "Issued by KodNest" },
+            { img: "img/ML.png", title: "Machine Learning Foundations", issuer: "Issued by NASSCOM" },
+            { img: "img/DBMS.png", title: "DBMS Introduction", issuer: "Issued by Udemy" }
+        ];
+
+        let currentIndex = 0;
+
+        function updateCertificate() {
+            document.getElementById("cert-img").src = certificates[currentIndex].img;
+            document.getElementById("cert-title").textContent = certificates[currentIndex].title;
+            document.getElementById("cert-issuer").textContent = certificates[currentIndex].issuer;
+        }
+
+        function nextCert() {
+            currentIndex = (currentIndex + 1) % certificates.length;
+            updateCertificate();
+        }
+
+        function prevCert() {
+            currentIndex = (currentIndex - 1 + certificates.length) % certificates.length;
+            updateCertificate();
+        }
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({offset:0});
+    </script>
+    <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2025 Venkatadri Majjari | All Rights Reserved</p>
+    </footer>  
+
+</body>
+</html>

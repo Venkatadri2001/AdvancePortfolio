@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Venkatadri Portfolio</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+                <span>Projects</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="index.html">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="about.html">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="skills.html">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="projects.html">Projects</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="certifications.html">Certifications</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="contact.html">Contact</a></div>
+        </div>
+        <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+    </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="skills.html">Skills</a>
+                <a href="projects.html">Projects</a>
+                <a href="certifications.html">Certifications</a>
+                <a href="contact.html">Contact</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+    <section class="projects">
+        <div class="projects-container">
+            <div class="project-card" data-aos="fade-up">
+                <h3>License plate recognition methods using open CV</h3>
+                <p>This project mainly aims to identify the cars that are breaking the traffic rules, it is used 
+                    to capture the license plates of the vehicle getting into and out of certain premises, 
+                    built with Python Programming, NumPy, Pandas, Pytesseract, Open CV.</p>
+                <p>Engineered a robust backend in Python, improving system performance by 25% with 
+                    optimized logic and data processing capabilities.</p>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <h3>Fresh Vegetables App</h3>
+                <p>Developed user-friendly interface using HTML, CSS, JavaScript,
+                    driving a increase in user engagement and seamless navigation experience.</p>
+                <p>Streamlined Python-powered backend for swift data processing, achieving a 30% 
+                    reduction in response times for user interactions and enhancing overall system 
+                    efficiency.</p>
+                    <p>Facilitated direct connections between organic farmers and consumers, catalyzing 
+                        a 15% expansion of the agricultural community and promoting sustainable practices.</p>
+                <a href="https://venkatadri2001.github.io/VegetableStore/">View Project</a>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                <h3>My Gym Web Application</h3>
+                <p>Designed a responsive UI with HTML, CSS, JavaScript and Bootstrap, increasing user engagement by 30%.</p>
+                <p>Enhanced system efficiency by 25% using optimized Python-powered backend for accelerated data processing, 
+                    improving user satisfaction.</p>
+                <p>Assumed a key role in fostering direct connections between gym training centres and clients, contributing to a 
+                    20% growth in Gym Management for health and fitness, while promoting sustainable practices.</p>
+            </div>
+        </div>
+    </section>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({offset:0});
+    </script>
+    <script src="script.js"></script>
+
+    <footer>
+        <p>&copy; 2025 Venkatadri Majjari | All Rights Reserved</p>
+    </footer>  
+
+</body>
+</html>
